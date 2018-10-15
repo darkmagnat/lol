@@ -896,7 +896,7 @@ client.on('message', message => {
                 });
             });
         });
-        break;
+
     };
 });
 
@@ -904,4 +904,4 @@ client.on('message', message => {
 
  
  
-client.login('NTAwNzQ0MjgwNTI1MTExMzE2.DqPSSQ.h8OsAc2JwfNCfg4NCYKqxzHRpq0')
+client.login(process.env.BOT_TOKEN);

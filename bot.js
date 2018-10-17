@@ -606,7 +606,6 @@ client.on('message', message => {
     }
 });
 
-  var prefix = ".";
   const HeRo = new Discord.Client();
   client.on('message', message => {
       if (message.content === prefix + "date") {

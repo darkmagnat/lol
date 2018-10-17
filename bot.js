@@ -646,9 +646,6 @@ client.on('message', message => {
     });
 
 
-
-var prefix = "."
-
 client.on('message', message => {
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
@@ -767,7 +764,7 @@ client.on('ready', () => {
 }); 
 
 client.on("message", message => {
-    var prefix = "";
+    var prefix = "/";
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "امسح")) {
  if (!args[1]) {
@@ -891,7 +888,7 @@ client.on('message', msg => {
 const hastebin = require('hastebin.js');
 const fs = require('fs');
 var h = new hastebin({});
-var prefix = "!";
+var prefix = "/";
 
 client.on('message', message => {
     if (!message.content.startsWith(prefix)) return;

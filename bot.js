@@ -652,29 +652,6 @@ message.channel.sendEmbed(cat);
     }
 });
 
-const Discord = require('discord.js');
-const logger = require('winston'); //NOURELDIEN ALPHACODES
-const connect4 = require('./connect4/connect4.js');
-//NOURELDIEN ALPHACODES
-const runningGames = new Map(); //NOURELDIEN ALPHACODES 
-// Configure logger settings
-logger.remove(logger.transports.Console);
-logger.add(logger.transports.Console, {
-    colorize: true
-});
-logger.level = 'debug'; //NOURELDIEN ALPHACODES
-
- //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES
-
-const playTheGame = (msg) => {
-    if(runningGames.has(msg.author.id)){
-        console.log(runningGames);
-    }else{
-        runningGames.set(msg.author.id, new connect4());
-    }
-};
-
-
 const emojiToCol = new Map();
 emojiToCol.set('\u0031\u20E3',0);
 emojiToCol.set('\u0032\u20E3',1);

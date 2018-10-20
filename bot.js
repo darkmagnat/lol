@@ -24,887 +24,819 @@ const prefix = "&";
 /////////////////////////
 ////////////////////////
 
-client.on('message', msg => {
-  if (msg.content === 'باك') {
-    msg.reply('**ولكم منور يا عسل**');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'السلام عليكم') {
-    msg.reply('**وعليكم السلام ورحمة الله وبركاته**');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'سلام عليكم') {
-    msg.reply('**وعليكم السلام ورحمة الله وبركاته**');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'برب') {
-    msg.reply('**تيت لا اطول علينا يا غالي**');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === '.') {
-    msg.reply('أطلق ثبات وجودك :kissing_heart::kissing_heart:');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'هلا') {
-    msg.reply('**هلا وغلا ارحب**');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'الرابط') {
-    msg.reply('https://discord.gg/DHKv8F');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'رابط') {
-    msg.reply('https://discord.gg/DHKv8F');
-  }
-});
-
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-         client.on('message', message => {
-            if (message.content === '!') {
-              message.channel.send('**Welcome To Clan Royal Diamond :hotsprings: :crown: **');
-              message.channel.sendFile("./photoshop.PNG");
-               
-
-            }
-});
-
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-         client.on('message', message => {
-            if (message.content === 'الشعار') {
-              message.channel.send('شعارك بل دسكورد   **! RD**');
-			  
-			  
-						
-			  message.channel.send('شعارك بل اللعبة   **➼ર𝕯♛**');
-              message.channel.sendFile("./photoshop.PNG");
-               
-
-            }
-});
-
-
-client.on('message', async message =>{
-
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-  let sicon = message.author.displayAvatarURL;
-  if(cmd === `$id`) {
-      var bots = new Discord.RichEmbed()
-
-      .setDescription(`** Your id: ${message.author.id}  **`)
-      .setColor('RANDOM')
-      message.channel.send(bots);
-  }
-});
-
-
-
-
-
-  client.on('message', message => {
-   if (message.content === "~id") {
-   let embed = new Discord.RichEmbed()
-  .setColor("RANDOM")
-  .setThumbnail(message.author.avatarURL)
-  .addField("Name:",`${message.author.username}`, true)
-  .addField('Discrim:',"#" +  message.author.discriminator, true)
-  .addField("ID:", message.author.id, true)
-  .addField("Create At:", message.author.createdAt, true)
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-}); 
-   
-   
-
-
-
-
+const Sra7a = [
+            'صراحه  |  صوتك حلوة؟',
+            'صراحه  |  التقيت الناس مع وجوهين؟',
+            'صراحه  |  شيء وكنت تحقق اللسان؟',
+            'صراحه  |  أنا ��خص ضعيف عندما؟',
+            'صراحه  |  هل ترغب في إظهار حبك ومرفق لشخص أو رؤية هذا الضعف؟',
+            'صراحه  |  يدل على أن الكذب مرات تكون ضرورية شي؟',
+            'صراحه  |  أشعر بالوحدة على الرغم من أنني تحيط بك كثيرا؟',
+            'صراحه  |  كيفية الكشف عن من يكمن عليك؟',
+            'صراحه  |  إذا حاول شخص ما أن يكرهه أن يقترب منك ويهتم بك تعطيه فرصة؟',
+            'صراحه  |  أشجع شيء حلو في حياتك؟',
+            'صراحه  |  طريقة جيدة يقنع حتى لو كانت الفكرة خاطئة" توافق؟',
+            'صراحه  |  كيف تتصرف مع من يسيئون فهمك ويأخذ على ذهنه ثم ينتظر أن يرفض؟',
+            'صراحه  |  التغيير العادي عندما يكون الشخص الذي يحبه؟',
+            'صراحه  |  المواقف الصعبة تضعف لك ولا ترفع؟',
+            'صراحه  |  نظرة و يفسد الصداقة؟',
+            'صراحه  |  ‏‏إذا أحد قالك كلام سيء بالغالب وش تكون ردة فعلك؟',
+            'صراحه  |  شخص معك بالحلوه والمُره؟',
+            'صراحه  |  ‏هل تحب إظهار حبك وتعلقك بالشخص ��م ترى ذلك ضعف؟',
+            'صراحه  |  تأخذ بكلام اللي ينصحك ولا تسوي اللي تبي؟',
+            'صراحه  |  وش تتمنى الناس تعرف عليك؟',
+            'صراحه  |  ابيع المجرة عشان؟',
+            'صراحه  |  أحيانا احس ان الناس ، كمل؟',
+            'صراحه  |  مع مين ودك تنام اليوم؟',
+            'صراحه  |  صدفة العمر الحلوة هي اني؟',
+            'صراحه  |  الكُره العظيم دايم يجي بعد حُب قوي " تتفق؟',
+            'صراحه  |  صفة تحبها في نفسك؟',
+            'صراحه  |  ‏الفقر فقر العقول ليس الجيوب " ، تتفق؟',
+            'صراحه  |  تصلي صلواتك الخمس كلها؟',
+            'صراحه  |  ‏تجامل أحد على راحتك؟',
+            'صراحه  |  اشجع شيء سويتة بحياتك؟',
+            'صراحه  |  وش ناوي تسوي اليوم؟',
+            'صراحه  |  وش شعورك لما تشوف المطر؟',
+            'صراحه  |  غيرتك هاديه ولا تسوي مشاكل؟',
+            'صراحه  |  ما اكثر شي ندمن عليه؟',
+            'صراحه  |  اي الدول تتمنى ان تزورها؟',
+            'صراحه  |  متى اخر مره بكيت؟',
+            'صراحه  |  تقيم حظك ؟ من عشره؟',
+            'صراحه  |  هل تعتقد ان حظك سيئ؟',
+            'صراحه  |  شـخــص تتمنــي الإنتقــام منـــه؟',
+            'صراحه  |  كلمة تود سماعها كل يوم؟',
+            'صراحه  |  **هل تُتقن عملك أم تشعر بالممل؟',
+            'صراحه  |  هل قمت بانتحال أحد الشخصيات لتكذب على من حولك؟',
+            'صراحه  |  متى آخر مرة قمت بعمل مُشكلة كبيرة وتسببت في خسائر؟',
+            'صراحه  |  ما هو اسوأ خبر سمعته بحياتك؟',
+            '‏صراحه | هل جرحت شخص تحبه من قبل ؟',
+            'صراحه  |  ما هي العادة التي تُحب أن تبتعد عنها؟',
+            '‏صراحه | هل تحب عائلتك ام تكرههم؟',
+            '‏صراحه  |  من هو الشخص الذي يأتي في قلبك بعد الله – سبحانه وتعالى- ورسوله الكريم – صلى الله عليه وسلم؟',
+            '‏صراحه  |  هل خجلت من نفسك من قبل؟',
+            '‏صراحه  |  ما هو ا الحلم  الذي لم تستطيع ان تحققه؟',
+            '‏صراحه  |  ما هو الشخص الذي تحلم به كل ليلة؟',
+            '‏صراحه  |  هل تعرضت إلى موقف مُ��رج جعلك تكره صاحبهُ؟',
+             '‏صراحه  |  هل قمت بالبكاء أمام من تُحب؟',
+            '‏صراحه  |  ماذا تختار حبيبك أم صديقك؟',
+            '‏صراحه  | هل حياتك سعيدة أم حزينة؟',
+            'صراحه  |  ما هي أجمل سنة عشتها بحياتك؟',
+            '‏صراحه  |  ما هو عمرك الحقيقي؟',
+            '‏صراحه  |  ما اكثر شي ندمن عليه؟',
+            'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
+       ]
+          client.on('message', message => {
+			  	var prefix = "*"
+        if (message.content.startsWith(prefix + 'صراحه')) {
+            if(!message.channel.guild) return message.reply('** This command only for servers **');
+         var client= new Discord.RichEmbed()
+         .setTitle("Alpha")
+         .setColor('RANDOM')
+         .setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
+         .setImage("https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
+                         .setTimestamp()
+       
+          message.channel.sendEmbed(client);
+          message.react("??")
+        }
+       });
  
-   
-   
-   
-   
-
 client.on('message', message => {
-    if(message.author.bot) return; // Alpha Codes Server.
-    if(message.channel.type === 'dm') return;
-   
-    var args = message.content.toLowerCase().split(' '); // Alpha Codes Server.
-    var command = args[0];
-    var prefix = '!'; // <=========== تقدر تغير البرفكس
-   
-    if(command == prefix + 'members') {
-        var memberS = message.guild.members.size; // Alpha Codes Server.
-        if(!args[1] || isNaN(args[1]) || args[1] === '1') {
-            var number = 1;
- 
-            if(memberS > 10) {
-                var more = `\n__:sparkles: **More?** \`\`${prefix}members 2\`\` (${Math.round(memberS / 10)} pages)`;
-            }else {
-                var more = '__'; // Alpha Codes Server.
-            }
- 
-            let embedS = new Discord.RichEmbed()
-            .setTitle(`:white_check_mark: **${memberS}** Members.`) // Alpha Codes Server.
-            .setColor('GREEN')
-            .setDescription(`__\n__${message.guild.members.map(m => `**${number++}.** \`\`${m.user.tag}\`\``).slice(0, 10).join('\n')}__\n${more}`)
-            .setTimestamp()
-            .setFooter(message.author.tag, message.author.avatarURL)
- 
-            message.channel.send(embedS);
-        }else if(!isNaN(args[1])) {
-            var number = 1;
- 
-            if(memberS > 10) {
-                var more = `choose **1** To **${Math.round(memberS / 10)}**`;
-            }else {
-                var more = 'This server have **1** Page only.'; // Alpha Codes Server.
-            }
- 
-            if(Math.round(args[1].replace('-', '')) * 10 - 9 > memberS) return message.channel.send(`:no_entry: | I couldn\'t find the page. ${more}`);
- 
-           let embedS = new Discord.RichEmbed()
-           .setTitle(`:white_check_mark: **${memberS}** Members.`) // Alpha Codes Server.
-           .setColor('GREEN')
-           .setDescription(`__\n__${message.guild.members.map(m => `**${number++}.** \`\`${m.user.tag}\`\``).slice(10 * Math.round(args[1].replace('-', '')) - 10, 10 * Math.round(args[1].replace('-', ''))).join('\n')}\n\n:sparkles: **More?** \`\`${prefix}members ${Math.round(args[1].replace('-', '')) + 1}\`\` (${Math.round(memberS / 10)} pages)`)
-           .setTimestamp()
-           .setFooter(message.author.tag, message.author.avatarURL)
- 
-           message.channel.send(embedS);
-       }
-   }
- 
- 
- 
- 
- 
- 
-   if(command == prefix + 'info-member') { // Alpha Codes Server.
-       if(!args[1]) return message.channel.send(`:no_entry: | Please enter the member number. \`\`If you want to know how to get the member number please type ${prefix}members (page)\`\``);
-       if(isNaN(args[1])) return message.channel.send(`:no_entry: | Please enter the member number. \`\`If you want to know how to get the member number please type ${prefix}members (page)\`\``);
-       if(args[1] > message.guild.members.size) return message.channel.send(`:no_entry: | I couldn\'t find the user. Please selecte number from 1 to ${message.guild.members.size}`);
- 
-       let memberInfo = new Discord.RichEmbed()
-       .setTitle(`:white_check_mark: Informations about **${message.guild.members.map(m => m.user.tag).slice(Math.round(args[1].replace('-', '')) - 1, Math.round(args[1].replace('-', '')))}**`) // Alpha Codes Server.
-       .setThumbnail(`${message.guild.members.map(m => m.user.avatarURL).slice(Math.round(args[1].replace('-', '')) - 1, Math.round(args[1].replace('-', '')))}`)
-       .setColor('GREEN')
-       .setDescription(`__\n__**INFORMATIONS USER:**\n\n**User ID:** \`\`${message.guild.members.map(m => m.user.id).slice(Math.round(args[1].replace('-', '')) - 1, Math.round(args[1].replace('-', '')))}\`\`\n**User Tag:** \`\`#${message.guild.members.map(m => m.user.discriminator).slice(Math.round(args[1].replace('-', '')) - 1, Math.round(args[1].replace('-', '')))}\`\`\n**User Created at:** \`\`${message.guild.members.map(m => Days(m.user.createdAt)).slice(Math.round(args[1].replace('-', '')) - 1, Math.round(args[1].replace('-', '')))}\`\`\n**User Joined at:** \`\`${message.guild.members.map(m => Days(m.joinedAt)).slice(Math.round(args[1].replace('-', '')) - 1, Math.round(args[1].replace('-', '')))}\`\`\n**User Status:** \`\`${message.guild.members.map(m => m.user.presence.status).slice(Math.round(args[1].replace('-', '')) - 1, Math.round(args[1].replace('-', '')))}\`\`\n**User Roles Amount:** \`\`${message.guild.members.map(m => m.roles.size - 1).slice(Math.round(args[1].replace('-', '')) - 1, Math.round(args[1].replace('-', '')))} Role.\`\`\n**User Bot:** \`\`${message.guild.members.map(m => m.user.bot).slice(Math.round(args[1].replace('-', '')) - 1, Math.round(args[1].replace('-', '')))}\`\``) // Alpha Codes Server.
-       .setTimestamp()
-       .setFooter(message.author.tag, message.author.avatarURL) // Alpha Codes Server.
- 
-       message.channel.send(memberInfo);
-   } // Alpha Codes Server.
-});
-function Days(date) {
-   let now = new Date(); // Alpha Codes Server.
-   let diff = now.getTime() - date.getTime(); // Alpha Codes Server.
-   let days = Math.floor(diff / 86400000);
-   return days + (days == 1 ? " day" : " days") + " ago"; // Alpha Codes Server.
-}
-   
+    if (!points[message.author.id]) points[message.author.id] = { 
+        points: 0,
+      };
+    if (message.content.startsWith(prefix + 'ايموجي')) { 
+        if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
+    
+    const type = require('./emoje/emoje.json'); 
+    const item = type[Math.floor(Math.random() * type.length)]; 
+    const filter = response => { 
+        return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
+    };
+   message.channel.send({embed: new Discord.RichEmbed().setTitle('لديك ثانيه للاجابه بالجواب الصحيح').setThumbnail(`${item.type}`)}).then(function(m) {
+             setTimeout(function() {
+m.edit({embed: new Discord.RichEmbed().setTitle('لديك 15 ثانيه للاجابه بالجواب الصحيح').setThumbnail('https://images-ext-2.discordapp.net/external/lLOYcLfSQaNo_5Ex0I-gBD5lIW-FfRXO-W_-ZxSpYLA/https/i.imgur.com/iReHvIZ.png?width=100&height=100')})
+             }, 1000)
+            message.channel.awaitMessages(filter, { maxMatches: 1, time: 15000, errors: ['time'] })
+            .then((collected) => {
+            message.channel.send(`${collected.first().author} ✅ **لقد قمت بكتابة الايموجي بالوقت المناسب**`);
+            console.log(`[Game] ${collected.first().author} Answered with the correct answer`);
+                let won = collected.first().author;
+                points[won.id].points++;
+              })
+              .catch(collected => { 
+                message.channel.send(`:x: **لم يقم أحد بكتابة الايموجي بالوقت المناسب**`);
+                console.log(`[Game] ماحد قال الاجابه`);
+                    })
+            })
+    }
+    });
 
+//==================== JSON
 
-   
- client.on('ready', () => {
-    console.log(`[Start] ${new Date()}`);
-    console.log(`[INFO] ${client.user.username}`)
-    console.log(`[INFO] ${client.users.size}`)
-    console.log(`[INFO] ${client.guilds.size}`)
-    console.log(`[BOT] Auto Role `)
-});
+[
+    {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/72/twitter/134/face-with-look-of-triumph_1f624.png",
+        "answers": ["ًںک¤"]
+    },
+    {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/baby_1f476.png",
+        "answers": ["ًں‘¶"]
+    },
+    {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/japanese-goblin_1f47a.png",
+        "answers": ["ًں‘؛"]
+    },
+    {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/see-no-evil-monkey_1f648.png",
+        "answers": ["ًں™ˆ"]
+    },
+        {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/flag-for-yemen_1f1fe-1f1ea.png",
+        "answers": ["ًں‡¾ًں‡ھ"]
+    },
+        {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/comet_2604.png",
+        "answers": ["âک„ï¸ڈ"]
+    },
+        {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/trident-emblem_1f531.png",
+        "answers": ["ًں”±"]
+    },
+        {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/fleur-de-lis_269c.png",
+        "answers": ["âڑœï¸ڈ"]
+    }
+    
+]
 
-client.on('guildMemberAdd', (member) => {
-member.addRole(member.guild.roles.find('name', '- ROYAL'));
-});  
-   
-
-   
-   
-   
+var RAW1 = ["https://f.top4top.net/p_682it2tg6.png","https://e.top4top.net/p_682a1cus5.png","https://d.top4top.net/p_682pycol4.png","https://c.top4top.net/p_682vqehy3.png","https://b.top4top.net/p_682mlf9d2.png","https://a.top4top.net/p_6827dule1.png","https://b.top4top.net/p_682g1meb10.png","https://a.top4top.net/p_682jgp4v9.png","https://f.top4top.net/p_682d4joq8.png","https://e.top4top.net/p_6828o0e47.png","https://d.top4top.net/p_6824x7sy6.png","https://c.top4top.net/p_682gzo2l5.png","https://b.top4top.net/p_68295qg04.png","https://a.top4top.net/p_682zrz6h3.png","https://f.top4top.net/p_6828vkzc2.png","https://e.top4top.net/p_682i8tb11.png"]
+var RAW2 = ["ًں“™__60%__  **|**  ًں“ک__40%__","ًں“™__63%__  **|**  ًں“ک__37%__","ًں“™__89%__  **|**  ًں“ک__11%__","ًں“™__97%__  **|**  ًں“ک__3%__"]
+client.on('message', message => {
+    if(!message.guild) return;
+    if (message.author.bot) return;
+      let id = message.author.id,prefix="!";
+      if (ti[id] && (new Date).getTime() - ti[id] < 20*1000) {
+          let r = (new Date).getTime() - ti[id];
+          r = 20*1000 - r;
+      message.channel.send(` **Please wait ${pretty(r, {verbose:true})}**`).then(m => m.delete(5000));
+      return;
+      }
+      if ( message.content == prefix+'لو خيروك'){
+         
+          try{
+  //body
+  }catch(e){
  
+  }
+         var Embed = new Discord.RichEmbed()
+.setImage(RAW1[Math.floor(Math.random() * RAW2.length)])
+message.channel.sendEmbed(Embed).then(msg => {
+    msg.react('ًں“ک').then( r => {
+        msg.react('ًں“™')
+ 
+        let blueFilter = (reaction, user) => reaction.emoji.name === 'ًں“ک' && user.id === message.author.id;
+    let orangeFilter = (reaction, user) => reaction.emoji.name === 'ًں“™' && user.id === message.author.id;
+ 
+ 
+    let blue = msg.createReactionCollector(blueFilter, { time: 15000 });
+    let orange = msg.createReactionCollector(orangeFilter, { time: 15000 });
+ 
+ 
+    blue.on("collect", r => {
+        msg.delete();
+        message.channel.send(RAW2[Math.floor(Math.random() * RAW2.length)]).then(m => m.delete(60000));
+ 
+        })
+       
+ orange.on("collect", r => {
+        msg.delete();
+        message.channel.send(RAW2[Math.floor(Math.random() * RAW2.length)]).then(m => m.delete(60000));
+ 
+        })
+ 
+                                })
+                                })
+                              ti[id] = (new Date).getTime()
+                                }
+                                });
 
-
-  
-  
-  
-  
-  
-  
-  
-  
-  client.on('ready',  () => {
-  console.log('By : عنان اوفر ');
-  console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
-  console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
-});
-
-
-client.on("message", message => {
-             
-     if(!message.channel.guild) return;
-
- if (message.content === "ping") {
-   message.react("??")
-  const embed = new Discord.RichEmbed()
-      .setColor("RANDOM")
-      .addField("?Bot 1 | Arab Community? ?اسم البوت?", true)
-      
-      .addField("?مصمم البوت iTzAnan_Over#3412?", true)
-      
-      .addField("?!help^????اذا تبي جميع الاوامر مع اوامر اضافية???", true)
-      
-	    .addField("?!help^^????اذا تبي الاوامر العامة???", true)
+client.on("message", function(message) {
+	var prefix = "!";
+   if(message.content.startsWith(prefix + "rps")) {
+    let messageArgs = message.content.split(" ").slice(1).join(" ");
+    let messageRPS = message.content.split(" ").slice(2).join(" ");
+    let arrayRPS = ['**# - Rock**','**# - Paper**','**# - Scissors**'];
+    let result = `${arrayRPS[Math.floor(Math.random() * arrayRPS.length)]}`;
+    var RpsEmbed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setThumbnail(message.author.avatarURL)
+    .addField("Rock","ًں‡·",true)
+    .addField("Paper","ًں‡µ",true)
+    .addField("Scissors","ًں‡¸",true)
+    message.channel.send(RpsEmbed).then(msg => {
+        msg.react(' ًں‡·')
+        msg.react("ًں‡¸")
+        msg.react("ًں‡µ")
+.then(() => msg.react('ًں‡·'))
+.then(() =>msg.react('ًں‡¸'))
+.then(() => msg.react('ًں‡µ'))
+let reaction1Filter = (reaction, user) => reaction.emoji.name === 'ًں‡·' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === 'ًں‡¸' && user.id === message.author.id;
+let reaction3Filter = (reaction, user) => reaction.emoji.name === 'ًں‡µ' && user.id === message.author.id;
+let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 	    
-      .addField("?!help^^^????اذا تبي  الاوامر الادارية???", true)
-      
-      .addField("?????قريبا سوف نضيف المزيد و المزيد من الاوامر ?????", true)
-      
-  message.channel.sendMessage({embed});
+let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
+let reaction3 = msg.createReactionCollector(reaction3Filter, { time: 12000 });
+reaction1.on("collect", r => {
+        message.channel.send(result)
+})
+reaction2.on("collect", r => {
+        message.channel.send(result)
+})
+reaction3.on("collect", r => {
+        message.channel.send(result)
+})
 
+    })
+}
+});
+ 
+client.on('message', message => {
+if(message.content === prefix + 'quran' || message.content === prefix + 'قرآن') {
+	let pages = ['http://quran.ksu.edu.sa/ayat/safahat1/1.png','http://quran.ksu.edu.sa/ayat/safahat1/2.png','http://quran.ksu.edu.sa/ayat/safahat1/3.png','http://quran.ksu.edu.sa/ayat/safahat1/4.png','http://quran.ksu.edu.sa/ayat/safahat1/5.png','http://quran.ksu.edu.sa/ayat/safahat1/6.png','http://quran.ksu.edu.sa/ayat/safahat1/7.png','http://quran.ksu.edu.sa/ayat/safahat1/8.png','http://quran.ksu.edu.sa/ayat/safahat1/9.png','http://quran.ksu.edu.sa/ayat/safahat1/10.png','http://quran.ksu.edu.sa/ayat/safahat1/11.png','http://quran.ksu.edu.sa/ayat/safahat1/12.png','http://quran.ksu.edu.sa/ayat/safahat1/13.png','http://quran.ksu.edu.sa/ayat/safahat1/14.png','http://quran.ksu.edu.sa/ayat/safahat1/15.png','http://quran.ksu.edu.sa/ayat/safahat1/16.png','http://quran.ksu.edu.sa/ayat/safahat1/17.png','http://quran.ksu.edu.sa/ayat/safahat1/18.png','http://quran.ksu.edu.sa/ayat/safahat1/19.png','http://quran.ksu.edu.sa/ayat/safahat1/20.png','http://quran.ksu.edu.sa/ayat/safahat1/21.png','http://quran.ksu.edu.sa/ayat/safahat1/22.png','http://quran.ksu.edu.sa/ayat/safahat1/23.png','http://quran.ksu.edu.sa/ayat/safahat1/24.png','http://quran.ksu.edu.sa/ayat/safahat1/25.png','http://quran.ksu.edu.sa/ayat/safahat1/26.png','http://quran.ksu.edu.sa/ayat/safahat1/27.png','http://quran.ksu.edu.sa/ayat/safahat1/28.png','http://quran.ksu.edu.sa/ayat/safahat1/29.png','http://quran.ksu.edu.sa/ayat/safahat1/30.png','http://quran.ksu.edu.sa/ayat/safahat1/31.png','http://quran.ksu.edu.sa/ayat/safahat1/32.png','http://quran.ksu.edu.sa/ayat/safahat1/33.png','http://quran.ksu.edu.sa/ayat/safahat1/34.png','http://quran.ksu.edu.sa/ayat/safahat1/35.png','http://quran.ksu.edu.sa/ayat/safahat1/36.png','http://quran.ksu.edu.sa/ayat/safahat1/37.png','http://quran.ksu.edu.sa/ayat/safahat1/38.png','http://quran.ksu.edu.sa/ayat/safahat1/39.png','http://quran.ksu.edu.sa/ayat/safahat1/40.png','http://quran.ksu.edu.sa/ayat/safahat1/41.png','http://quran.ksu.edu.sa/ayat/safahat1/42.png','http://quran.ksu.edu.sa/ayat/safahat1/43.png','http://quran.ksu.edu.sa/ayat/safahat1/44.png','http://quran.ksu.edu.sa/ayat/safahat1/45.png','http://quran.ksu.edu.sa/ayat/safahat1/46.png','http://quran.ksu.edu.sa/ayat/safahat1/47.png','http://quran.ksu.edu.sa/ayat/safahat1/48.png','http://quran.ksu.edu.sa/ayat/safahat1/49.png','http://quran.ksu.edu.sa/ayat/safahat1/50.png','http://quran.ksu.edu.sa/ayat/safahat1/51.png','http://quran.ksu.edu.sa/ayat/safahat1/52.png','http://quran.ksu.edu.sa/ayat/safahat1/53.png','http://quran.ksu.edu.sa/ayat/safahat1/55.png','http://quran.ksu.edu.sa/ayat/safahat1/56.png','http://quran.ksu.edu.sa/ayat/safahat1/57.png','http://quran.ksu.edu.sa/ayat/safahat1/58.png','http://quran.ksu.edu.sa/ayat/safahat1/59.png','http://quran.ksu.edu.sa/ayat/safahat1/60.png','http://quran.ksu.edu.sa/ayat/safahat1/60.png','http://quran.ksu.edu.sa/ayat/safahat1/61.png','http://quran.ksu.edu.sa/ayat/safahat1/62.png','http://quran.ksu.edu.sa/ayat/safahat1/63.png','http://quran.ksu.edu.sa/ayat/safahat1/64.png','http://quran.ksu.edu.sa/ayat/safahat1/65.png','http://quran.ksu.edu.sa/ayat/safahat1/66.png','http://quran.ksu.edu.sa/ayat/safahat1/67.png','http://quran.ksu.edu.sa/ayat/safahat1/68.png','http://quran.ksu.edu.sa/ayat/safahat1/69.png','http://quran.ksu.edu.sa/ayat/safahat1/70.png','http://quran.ksu.edu.sa/ayat/safahat1/71.png','http://quran.ksu.edu.sa/ayat/safahat1/72.png','http://quran.ksu.edu.sa/ayat/safahat1/73.png','http://quran.ksu.edu.sa/ayat/safahat1/74.png','http://quran.ksu.edu.sa/ayat/safahat1/75.png','http://quran.ksu.edu.sa/ayat/safahat1/76.png','http://quran.ksu.edu.sa/ayat/safahat1/77.png','http://quran.ksu.edu.sa/ayat/safahat1/78.png','http://quran.ksu.edu.sa/ayat/safahat1/79.png','http://quran.ksu.edu.sa/ayat/safahat1/80.png','http://quran.ksu.edu.sa/ayat/safahat1/81.png','http://quran.ksu.edu.sa/ayat/safahat1/82.png','http://quran.ksu.edu.sa/ayat/safahat1/83.png','http://quran.ksu.edu.sa/ayat/safahat1/84.png','http://quran.ksu.edu.sa/ayat/safahat1/85.png','http://quran.ksu.edu.sa/ayat/safahat1/86.png','http://quran.ksu.edu.sa/ayat/safahat1/87.png','http://quran.ksu.edu.sa/ayat/safahat1/88.png','http://quran.ksu.edu.sa/ayat/safahat1/89.png','http://quran.ksu.edu.sa/ayat/safahat1/90.png','http://quran.ksu.edu.sa/ayat/safahat1/91.png','http://quran.ksu.edu.sa/ayat/safahat1/92.png','http://quran.ksu.edu.sa/ayat/safahat1/93.png','http://quran.ksu.edu.sa/ayat/safahat1/94.png','http://quran.ksu.edu.sa/ayat/safahat1/95.png','http://quran.ksu.edu.sa/ayat/safahat1/96.png','http://quran.ksu.edu.sa/ayat/safahat1/97.png','http://quran.ksu.edu.sa/ayat/safahat1/98.png','http://quran.ksu.edu.sa/ayat/safahat1/99.png','http://quran.ksu.edu.sa/ayat/safahat1/100.png','http://quran.ksu.edu.sa/ayat/safahat1/101.png','http://quran.ksu.edu.sa/ayat/safahat1/102.png','http://quran.ksu.edu.sa/ayat/safahat1/103.png','http://quran.ksu.edu.sa/ayat/safahat1/104.png','http://quran.ksu.edu.sa/ayat/safahat1/105.png','http://quran.ksu.edu.sa/ayat/safahat1/106.png','http://quran.ksu.edu.sa/ayat/safahat1/107.png','http://quran.ksu.edu.sa/ayat/safahat1/108.png','http://quran.ksu.edu.sa/ayat/safahat1/109.png','http://quran.ksu.edu.sa/ayat/safahat1/110.png','http://quran.ksu.edu.sa/ayat/safahat1/111.png','http://quran.ksu.edu.sa/ayat/safahat1/112.png','http://quran.ksu.edu.sa/ayat/safahat1/113.png','http://quran.ksu.edu.sa/ayat/safahat1/114.png','http://quran.ksu.edu.sa/ayat/safahat1/115.png','http://quran.ksu.edu.sa/ayat/safahat1/116.png','http://quran.ksu.edu.sa/ayat/safahat1/117.png','http://quran.ksu.edu.sa/ayat/safahat1/118.png','http://quran.ksu.edu.sa/ayat/safahat1/119.png','http://quran.ksu.edu.sa/ayat/safahat1/120.png','http://quran.ksu.edu.sa/ayat/safahat1/121.png','http://quran.ksu.edu.sa/ayat/safahat1/122.png','http://quran.ksu.edu.sa/ayat/safahat1/123.png','http://quran.ksu.edu.sa/ayat/safahat1/124.png','http://quran.ksu.edu.sa/ayat/safahat1/125.png','http://quran.ksu.edu.sa/ayat/safahat1/126.png','http://quran.ksu.edu.sa/ayat/safahat1/127.png','http://quran.ksu.edu.sa/ayat/safahat1/128.png','http://quran.ksu.edu.sa/ayat/safahat1/129.png','http://quran.ksu.edu.sa/ayat/safahat1/130.png','http://quran.ksu.edu.sa/ayat/safahat1/131.png','http://quran.ksu.edu.sa/ayat/safahat1/132.png','http://quran.ksu.edu.sa/ayat/safahat1/133.png','http://quran.ksu.edu.sa/ayat/safahat1/134.png','http://quran.ksu.edu.sa/ayat/safahat1/135.png','http://quran.ksu.edu.sa/ayat/safahat1/136.png','http://quran.ksu.edu.sa/ayat/safahat1/137.png','http://quran.ksu.edu.sa/ayat/safahat1/138.png','http://quran.ksu.edu.sa/ayat/safahat1/139.png','http://quran.ksu.edu.sa/ayat/safahat1/140.png','http://quran.ksu.edu.sa/ayat/safahat1/141.png','http://quran.ksu.edu.sa/ayat/safahat1/142.png','http://quran.ksu.edu.sa/ayat/safahat1/143.png','http://quran.ksu.edu.sa/ayat/safahat1/144.png','http://quran.ksu.edu.sa/ayat/safahat1/145.png','http://quran.ksu.edu.sa/ayat/safahat1/146.png','http://quran.ksu.edu.sa/ayat/safahat1/147.png','http://quran.ksu.edu.sa/ayat/safahat1/148.png','http://quran.ksu.edu.sa/ayat/safahat1/149.png','http://quran.ksu.edu.sa/ayat/safahat1/150.png','http://quran.ksu.edu.sa/ayat/safahat1/151.png','http://quran.ksu.edu.sa/ayat/safahat1/152.png','http://quran.ksu.edu.sa/ayat/safahat1/153.png','http://quran.ksu.edu.sa/ayat/safahat1/154.png','http://quran.ksu.edu.sa/ayat/safahat1/155.png','http://quran.ksu.edu.sa/ayat/safahat1/156.png','http://quran.ksu.edu.sa/ayat/safahat1/157.png','http://quran.ksu.edu.sa/ayat/safahat1/158.png','http://quran.ksu.edu.sa/ayat/safahat1/159.png','http://quran.ksu.edu.sa/ayat/safahat1/160.png','http://quran.ksu.edu.sa/ayat/safahat1/161.png','http://quran.ksu.edu.sa/ayat/safahat1/162.png','http://quran.ksu.edu.sa/ayat/safahat1/163.png','http://quran.ksu.edu.sa/ayat/safahat1/164.png','http://quran.ksu.edu.sa/ayat/safahat1/165.png','http://quran.ksu.edu.sa/ayat/safahat1/166.png','http://quran.ksu.edu.sa/ayat/safahat1/167.png','http://quran.ksu.edu.sa/ayat/safahat1/168.png','http://quran.ksu.edu.sa/ayat/safahat1/169.png','http://quran.ksu.edu.sa/ayat/safahat1/170.png','http://quran.ksu.edu.sa/ayat/safahat1/171.png','http://quran.ksu.edu.sa/ayat/safahat1/172.png','http://quran.ksu.edu.sa/ayat/safahat1/173.png','http://quran.ksu.edu.sa/ayat/safahat1/174.png','http://quran.ksu.edu.sa/ayat/safahat1/175.png','http://quran.ksu.edu.sa/ayat/safahat1/176.png','http://quran.ksu.edu.sa/ayat/safahat1/177.png','http://quran.ksu.edu.sa/ayat/safahat1/178.png','http://quran.ksu.edu.sa/ayat/safahat1/179.png','http://quran.ksu.edu.sa/ayat/safahat1/180.png','http://quran.ksu.edu.sa/ayat/safahat1/181.png','http://quran.ksu.edu.sa/ayat/safahat1/182.png','http://quran.ksu.edu.sa/ayat/safahat1/183.png','http://quran.ksu.edu.sa/ayat/safahat1/184.png','http://quran.ksu.edu.sa/ayat/safahat1/185.png','http://quran.ksu.edu.sa/ayat/safahat1/186.png','http://quran.ksu.edu.sa/ayat/safahat1/187.png','http://quran.ksu.edu.sa/ayat/safahat1/188.png','http://quran.ksu.edu.sa/ayat/safahat1/189.png','http://quran.ksu.edu.sa/ayat/safahat1/190.png','http://quran.ksu.edu.sa/ayat/safahat1/191.png','http://quran.ksu.edu.sa/ayat/safahat1/192.png','http://quran.ksu.edu.sa/ayat/safahat1/193.png','http://quran.ksu.edu.sa/ayat/safahat1/194.png','http://quran.ksu.edu.sa/ayat/safahat1/195.png','http://quran.ksu.edu.sa/ayat/safahat1/196.png','http://quran.ksu.edu.sa/ayat/safahat1/197.png','http://quran.ksu.edu.sa/ayat/safahat1/198.png','http://quran.ksu.edu.sa/ayat/safahat1/199.png','http://quran.ksu.edu.sa/ayat/safahat1/200.png']
+	let page = 1;
+	
+	message.delete();
+	
+	let embed = new Discord.RichEmbed()
+	.setColor('#264d00')
+	.setFooter(`القراآن الكريم | صفحة رقم ${page} من اصل ${pages.length} صفحة`, 'https://cdn.discordapp.com/attachments/404332408075190282/412722171325054996/NS1.png')
+	.setImage(pages[page-1])
+	
+// ${page}
+// ${pages.length}
+	message.channel.sendEmbed(embed).then(msg => {
+		
+		msg.react('⏮').then( r => {
+			msg.react('⬅')
+		.then(() => msg.react('⏹'))
+		.then(() => msg.react('➡'))
+		.then(() => msg.react('⏭'))
+			
+			let backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅' && user.id === message.author.id;
+			let forwardsFilter = (reaction, user) => reaction.emoji.name === '➡' && user.id === message.author.id;
+			
+			let sbackwardsFilter = (reaction, user) => reaction.emoji.name === '⏮' && user.id === message.author.id;
+			let sforwardsFilter = (reaction, user) => reaction.emoji.name === '⏭' && user.id === message.author.id;
+			
+			let cancelFilter = (reaction, user) => reaction.emoji.name === '⏹' && user.id === message.author.id;
+			
+			let backwards = msg.createReactionCollector(backwardsFilter, { time: 0 });
+			let forwards = msg.createReactionCollector(forwardsFilter, { time: 0 });
+			
+			let sbackwards = msg.createReactionCollector(sbackwardsFilter, { time: 0 });
+			let sforwards = msg.createReactionCollector(sforwardsFilter, { time: 0 });
+			
+			let cancel = msg.createReactionCollector(cancelFilter, { time: 0 });
+			
+			backwards.on('collect', r => {
+				if (page === 1) return;
+				page--;
+				embed.setImage(pages[page-1]);
+				embed.setFooter(`القراآن الكريم | صفحة رقم ${page} من اصل ${pages.length} صفحة`, 'https://cdn.discordapp.com/attachments/404332408075190282/412722171325054996/NS1.png');
+				msg.edit(embed)
+			})
+			forwards.on('collect', r => {
+				if (page === pages.length) return;
+				page++;
+				embed.setImage(pages[page-1]);
+				embed.setFooter(`القراآن الكريم | صفحة رقم ${page} من اصل ${pages.length} صفحة`, 'https://cdn.discordapp.com/attachments/404332408075190282/412722171325054996/NS1.png');
+				msg.edit(embed)
+			})
+			sbackwards.on('collect', r => {
+				if (page === 1) return;
+				page = 1;
+				embed.setImage(pages[page-1]);
+				embed.setFooter(`القراآن الكريم | صفحة رقم ${page} من اصل ${pages.length} صفحة`, 'https://cdn.discordapp.com/attachments/404332408075190282/412722171325054996/NS1.png');
+				msg.edit(embed)
+			})
+			sforwards.on('collect', r => {
+				if (page === pages.length) return;
+				page = 200; 
+				embed.setImage(pages[page-1]);
+				embed.setFooter(`القراآن الكريم | صفحة رقم ${page} من اصل ${pages.length} صفحة`, 'https://cdn.discordapp.com/attachments/404332408075190282/412722171325054996/NS1.png');
+				msg.edit(embed)
+			})
+			cancel.on('collect', r => {
+				embed.setDescription(`**سوف يتم إغلاق القائمة**`);
+				embed.setImage('');
+				embed.setFooter(`Menu will close after 3sec`, 'https://cdn.discordapp.com/attachments/404332408075190282/412722171325054996/NS1.png');
+				msg.edit(embed).then(msg.delete(3000));
+			})
+		})
+	})
+}
+});
+
+ 
+const pubg = [
+     'PUBG | ما هو اقوي سلاح برائيك ؟',
+     'PUBG | اين تجد سلاح الجروزا ؟ Grozza',
+     'PUBG | ماذا تفضل اكثر ام فور ام سكار ؟',
+     'PUBG | ايهما تفضل vss ام Awm',
+     'PUBG | ماذا تفضل اكثر ؟ سولو ام سكواد ؟',
+     'PUBG | كم جيم كسبت في العبه ؟',
+     'PUBG | ما هو اكثر عدد قتلت في مسيرتك بالعبه',
+     'PUBG | اذا انت المركز ال 2 هل سوف تقوم بتمشي علي رجلك ام ستاخذ سياره تحميك ؟',
+     'PUBG | اذا وجدت شخصين يتقاتلان , هل سوف تتقاتل معهم ام تنتظر قليلا حتي يقتل احدهما الاخر ؟',
+     'PUBG | اذا صديقك بالاسكواد يحتاج مساعده هل تساعده ام تتركه ؟',
+     'PUBG | اذا تم عمل لصديقك كونك اوت وامامك لوت كثير جدا سوف تذهب لتساعده ام تاخذ الوت وتدعه يموت ؟',
+     'PUBG | اين تجد ملابس القناصه ؟ ghillie suit ?',
+     'PUBG | ايهما تفضل ؟ الاختباء حتي يتبقي اشخاص قليله ام تذهب لتقتل ولا تختبئ',
+     'PUBG | اين تفضل ان تهبط من الطائره ؟ الاماكن الهادئيا لوت صغير ام الاماكن المزدحمه بالاعبين لاكن لوت كثير',
+     'PUBG | كم عدد المرات التي فزت بها لوحدك سولو ؟',
+     'PUBG | ما هو افضل سلاح تجيد استخدامه ؟',
+     'PUBG | ما هو اندر سلاح قد تجده برائيك ؟',
+     'PUBG | ما هو اندر سلاح جديد قد تجده برائيك ؟',
+     'PUBG | ما هو عدوك في العبه لاق البنق ام لاق الفريمات الاف بي اس ؟',
+     'PUBG | ايهما تفضل العب ؟ فـ المساء ام الصباح ؟',
+     'PUBG | هل تحب ان يكون الجيم ملئ بلاعبين ام لاعبين قليلين ؟',
+     'PUBG | هل الملابس تعبر عن انك محترف ام لا ؟',
+     'PUBG | كم معك من مال ( كوين ) بلعبه ؟',
+     'PUBG | ما هو اكثر شئ تكرهه في العبه ؟',
+     'PUBG | ما هو اكثر شئ تحبه بلعبه ؟',
+     'PUBG | ماذا تفضل شتو قن ( بندقيه ) ام قناصه ؟',
+     'PUBG | ماذا تفضل اكثر ؟ درع لفل 3 متضرر ام درع لفل 2 غير متضرر',
+     'PUBG | تفضل ان تلعب مع صديقك سكواد ام شخص غريب ؟',
+     'PUBG | هل تظن انك افضل شخص في اصدقائك بهذه اللعبه؟',
+     'PUBG | قيم نفسك من 10 كـ احتراف لك بالعبه',
+     'PUBG | هل فزت جيم من قبل بالعبه ؟',
+     'PUBG | هل وصلت للمركز ال 10 ( توب 10 ) قبل هكذا بلعبه ؟',
+     'PUBG | هل قمت بلعب مع صديقك من قبل بلعبه ؟',
+     'PUBG | هل تعلم من اخترع العبه ؟',
+     'PUBG | لو خيروك لعبه ببجي ام فورت نايت ؟',
+     'PUBG | هل يوجد شخص من اصدقاءك محترف اكثر منك ام انت اكثر شخص محترف ما بين اصدقاءك ؟',
+     'PUBG | اذا كنت من فريق مطورين العبه ماذا ستفعل ؟',
+     'PUBG | قيم من 10 مدي حبك للعبه',
+     'PUBG | هل تحب ان تتكلم صوت مع اصدقاءك وانت تلعب معاهم ام لا تحب هذا الامر ؟',
+ 
+]
+   client.on('message', message => {
+       if (message.author.bot) return;
+ if (message.content.startsWith('$pubg')) {
+     if(!message.channel.guild) return message.reply('** This command only for servers **');
+  var client= new Discord.RichEmbed()
+  .setTitle("لعبه اسئله باتل جرواند")
+  .setColor('#FFA500')
+  .setDescription(`${pubg[Math.floor(Math.random() * pubg.length)]}`)
+  .setImage("https://cdn.discordapp.com/attachments/416617103492251658/477741838292484127/pubg-orange-square.png")
+                  .setTimestamp()
+ 
+   message.channel.sendEmbed(client);
+   message.react("??")
  }
 });
 
 
 
-
 client.on('message', message => {
-   if (message.content === ".roll 1") {
-  message.channel.sendMessage(Math.floor(Math.random() * 25));
-    }
-});
- 
-client.on('message', message => {
-   if (message.content === ".roll 2") {
-  message.channel.sendMessage(Math.floor(Math.random() * 50));
-    }
-});
- 
-client.on('message', message => {
-   if (message.content === ".roll 3") {
-  message.channel.sendMessage(Math.floor(Math.random() * 75));
-    }
-});
- 
-client.on('message', message => {
-   if (message.content === ".roll 4") {
-  message.channel.sendMessage(Math.floor(Math.random() * 100));
-    }
-});
+if (!points[message.author.id]) points[message.author.id] = {
+    points: 50,
+  };
+if (message.content.startsWith(prefix + 'عواصم')) { 
+    if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
 
+const type = require('./3wasem/3wasem.json'); 
+const item = type[Math.floor(Math.random() * type.length)]; 
+const filter = response => { 
+    return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
+};
+message.channel.send('**اديك 15 ثاني�� لتوجد العاصمه الصحيحه**').then(msg => {
+    let embed = new Discord.RichEmbed()
+    .setColor('#000000')
+    .setFooter("عواصم  | Legend GaMerZ Bot", 'https://cdn.discordapp.com/avatars/439427357175185408/3eb163b7656922ebc9e90653d50231f1.png?size=2048')
+    .setDescription(`**اكتب عاصمه: ${item.type}**`)
 
+    msg.channel.sendEmbed(embed).then(() => {
+        message.channel.awaitMessages(filter, { maxMatches: 1, time: 15000, errors: ['time'] })
+        .then((collected) => {
+        message.channel.send(`${collected.first().author} ✅ **الاجابه صحيحه**`); 
 
-
-client.on("message", message => {
- if (message.content === ".help") {
-        message.react("??")
-           message.react("??")
-  const embed = new Discord.RichEmbed() 
-      .setColor("#ffff00")
-      .setThumbnail(message.author.avatarURL)
-      .setDescription(`
-	 ** سرعه اتصال ممتازه**
- **سهل الاستخدام **
- **صيانه كل يوم**
-** مجاني بل كامل **
-** البوت عربي و سيتم اضافه اللغه النكليزية**
-
-
-
-**اوامر عامة**
-                        
-!server معلومات عن السيرفر                      
-
-!servers علشان تشوف البوت بكم سيرفر اون لاين   
-
-!bot لمعرف البوت بكم سيرفر
-
-!date لمعرفه التاريخ
-
-!ping لمعرفه سرعه البوت
-
-!members معلومات عن الاعضاء
-
-!embed خاصيه غرد لكن بغير طريقه
-
-!say لي يكرر الكلام الذي تقوله
-
-!animal  كود لي اضهار صور  للحيوانات
-
-
-
-**اوامر ادارية**
-
-!rooms لمعرفه عدد رومات السيرفر
-
-!ban لتعطي شخص باند
-
-!kick لتعطي شخص كيك
-
-!clear لمسح الشات برقم
-
-!edit  لتعديل رساله 
-
-!ct  مـلاحظه: الاسم انت تختاره لي انشاء روم كتابي
-
-!cv  مـلاحظه: الاسم انت تختاره لي انشاء روم صوتي
-
-!delet  كـود يحذف الـروم سواء صوتي او كتابي
-
-
-
-
-**اوامر الصور**
-
-!avatar ?لي عرض صورتك او صوره اي شخص
-
-!image لي عرض صوره السيرفر
-
-قريبا
-
-
-
-
-
-
-
-`)
-
-
-message.author.sendEmbed(embed)
-
+        console.log(`[Typing] ${collected.first().author} typed the word.`);
+            let won = collected.first().author; 
+            points[won.id].points++;
+          })
+          .catch(collected => { 
+            message.channel.send(`:x: **لا يوجد احد كتب الاجابه الصحيحه**`);
+            console.log(`[Typing] ماحد قال الاجابه `);
+          })
+        })
+    })
 }
-}); 
+});
 
+//============================ الجيسون
 
-
-
-
-client.on('message', message => {
-    if (message.content.startsWith("!avatar")) {
-        var mentionned = message.mentions.users.first();
-    var x5bzm;
-      if(mentionned){
-          var x5bzm = mentionned;
-      } else {
-          var x5bzm = message.author;
-          
-      }
-        const embed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-        .setImage(`${x5bzm.avatarURL}`)
-      message.channel.sendEmbed(embed);
+[
+    {
+        "type": "العراق",
+        "answers": ["بغداد"]
+    },
+    {
+        "type": "مصر",
+        "answers": ["القاهرة"]
+    },
+    {
+        "type": "سوريا",
+        "answers": ["دمشق"]
+    },
+    {
+        "type": "السعودية",
+        "answers": ["الرياض"]
+    },
+    {
+        "type": "اليمن",
+        "answers": ["صنعاء"]
+    },
+    {
+        "type": "السودان",
+        "answers": ["الخرطوم"]
+    },
+    {
+        "type": "الاردن",
+        "answers": ["عمان"]
+    },
+    {
+        "type": "ليبيا",
+        "answers": ["طرابلس"]
+    },
+    {
+        "type": "البحرين",
+        "answers": ["المنامة"]
     }
-});
-
-                    client.on('message', message => {
-                                if(!message.channel.guild) return;
-                        if (message.content.startsWith('!ping')) {
-                            if(!message.channel.guild) return;
-                            var msg = `${Date.now() - message.createdTimestamp}`
-                            var api = `${Math.round(client.ping)}`
-                            if (message.author.bot) return;
-                        let embed = new Discord.RichEmbed()
-                        .setAuthor(message.author.username,message.author.avatarURL)
-                        .setThumbnail('https://cdn.discordapp.com/avatars/368141321547808768/c42716e13cb850f9ad0930af699472d0.png?size=2048nk')
-                        .setColor('RANDOM')
-                        .addField('**Time Taken:**',msg + " ms")
-                        .addField('**WebSocket:**',api + " ms")
-         message.channel.send({embed:embed});
-                        }
-                    });
-
-
-					
-					
-					
-
-
-
-
-
-
+]
 
 client.on('message', message => {
+    if (message.content == "!امثال") {
+        var x = ["أذا ذل رويال فهو ...",
+"الإتحاد ...",
+"الناس سواسية كأسنان ...",
+"ما أشبه الليله",
+"البعد ...",
+"الماء أهون موجود وأعز ...",
+"الهزيمة تحل ...",
+"العقل ...",
+"البطنة تزيل ...",
+"اللبيب بالإشارة ...",
+"اخطب لابنتك ولا تخطب ...",
+"أعز من الولد ولد ...",
+"القرد في عين أمه ...",
+"الكتاب يقرأ من ...",
+"آخر الحياة ...",
+"أكرم نفسك عن كل",
+"العز في نواصي",
+];
+        var x2 = ['ذليل',
+        "قوة",
+        "المشط",
+        "بالبارحة",
+        "جفاء",
+        "مفقود",
+        "العزيمة",
+        "زينة",
+        "الفطنة",
+        "يفهم",
+        "لابنك",
+        "الولد",
+        "غزال",
+        "عنوانه",
+        "الموت",
+        "دنيء",
+        "الخيل",
+        
+        
+        
+        
+        ];
+        
+        var x3 = Math.floor(Math.random()*x.length)
+        message.channel.send(` اكمل المثل التآلي :  __**${x[x3]}**__ ؟
+    لديك 30 ثآنية للإجآبة `).then(msg1=> {
+            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
+                maxMatches : 1,
+                time : 30000,
+                errors : ['time']
+            })
+        r.catch(() => {
+            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
+        })
+        
+        r.then((collected)=> {
+            message.channel.send(`${collected.first().author} لقد قمت بكتابة الجواب الصحيح بالوقت المناسب  `);
+        })
+        })
+    }
+})
+
+  const adkar = [
+    '**اذكار  | **اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ.',
+    '**اذكار  |  **اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى. ',
+    '**اذكار  ‏|  **اللَّهُمَّ اغْفِرْ لِي ذَنْبِي كُلَّهُ، دِقَّهُ، وَجِلَّهُ، وَأَوَّلَهُ، وَآخِرَهُ، وَعَلَانِيَتَهُ، وَسِرَّهُ. ',
+    '**‏اذكار  |  **أستغفر الله .',     
+    '**‏اذكار  | **الْلَّهُ أَكْبَرُ',
+    '**‏اذكار  |  **لَا إِلَهَ إِلَّا اللَّهُ',
+    '**اذكار  |  **اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ , وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ , اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ.',
+    '**اذكار  |  **سُبْحَانَ الْلَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَهَ إِلَّا الْلَّهُ، وَالْلَّهُ أَكْبَرُ',
+    '**اذكار  | **لَا إلَه إلّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلُّ شَيْءِ قَدِيرِ.',
+    '**اذكار  | **أسْتَغْفِرُ اللهَ وَأتُوبُ إلَيْهِ',
+    '**‏اذكار  | **سُبْحـانَ اللهِ وَبِحَمْـدِهِ. ',
+    '‏**اذكار**|  لَا إلَه إلّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءِ قَدِيرِ.',
+    '**اذكار  ‏|   **اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا.',
+    '**اذكار  | ‏ **يَا رَبِّ , لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ , وَلِعَظِيمِ سُلْطَانِكَ.',
+    'اذكار    |  **أسْتَغْفِرُ اللهَ العَظِيمَ الَّذِي لاَ إلَهَ إلاَّ هُوَ، الحَيُّ القَيُّومُ، وَأتُوبُ إلَيهِ.**',
+    '**‏اذكار  |  **اللَّهُمَّ إِنَّا نَعُوذُ بِكَ مِنْ أَنْ نُشْرِكَ بِكَ شَيْئًا نَعْلَمُهُ ، وَنَسْتَغْفِرُكَ لِمَا لَا نَعْلَمُهُ.',
+    '**‏اذكار  |  **اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ على نَبِيِّنَا مُحمَّد. ',
+    '**‏اذكار  |  **أَعـوذُ بِكَلِمـاتِ اللّهِ التّـامّـاتِ مِنْ شَـرِّ ما خَلَـق.',
+    '**اذكار  |  **يَا حَيُّ يَا قيُّومُ بِرَحْمَتِكَ أسْتَغِيثُ أصْلِحْ لِي شَأنِي كُلَّهُ وَلاَ تَكِلْنِي إلَى نَفْسِي طَـرْفَةَ عَيْنٍ. ',
+    '**اذكار  |  **اللّهُـمَّ إِنّـي أَعـوذُ بِكَ مِنَ الْكُـفر ، وَالفَـقْر ، وَأَعـوذُ بِكَ مِنْ عَذابِ القَـبْر ، لا إلهَ إلاّ أَنْـتَ.',
+    '**‏اذكار  |  **اللّهُـمَّ عافِـني في بَدَنـي ، اللّهُـمَّ عافِـني في سَمْـعي ، اللّهُـمَّ عافِـني في بَصَـري ، لا إلهَ إلاّ أَنْـتَ.',
+    '**‏اذكار  |  **سُبْحـانَ اللهِ وَبِحَمْـدِهِ عَدَدَ خَلْـقِه ، وَرِضـا نَفْسِـه ، وَزِنَـةَ عَـرْشِـه ، وَمِـدادَ كَلِمـاتِـه. ',
+    '**‏اذكار  |  **اللّهُـمَّ بِكَ أَصْـبَحْنا وَبِكَ أَمْسَـينا ، وَبِكَ نَحْـيا وَبِكَ نَمُـوتُ وَإِلَـيْكَ النُّـشُور.',
+    '**‏اذكار  |  **بِسـمِ اللهِ الذي لا يَضُـرُّ مَعَ اسمِـهِ شَيءٌ في الأرْضِ وَلا في السّمـاءِ وَهـوَ السّمـيعُ العَلـيم. ',
+    '**‏اذكار  |  **حَسْبِـيَ اللّهُ لا إلهَ إلاّ هُوَ عَلَـيهِ تَوَكَّـلتُ وَهُوَ رَبُّ العَرْشِ العَظـيم.',
+    '**اذكار  |  **اللّهُـمَّ ما أَصْبَـَحَ بي مِـنْ نِعْـمَةٍ أَو بِأَحَـدٍ مِـنْ خَلْـقِك ، فَمِـنْكَ وَحْـدَكَ لا شريكَ لَـك ، فَلَـكَ الْحَمْـدُ وَلَـكَ الشُّكْـر.',
+    '**‏اذكار  |  **اللّهُـمَّ إِنِّـي أَصْبَـحْتُ أُشْـهِدُك ، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك ، وَمَلَائِكَتَكَ ، وَجَمـيعَ خَلْـقِك ، أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك ، وَأَنَّ ُ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك',
+    '**‏اذكار  |  **رَضيـتُ بِاللهِ رَبَّـاً وَبِالإسْلامِ ديـناً وَبِمُحَـمَّدٍ صلى ��لله عليه وسلم نَبِيّـاً',
+    '**‏اذكار  |  **اللهم إني أعوذ بك من العجز، والكسل، والجبن، والبخل، والهرم، وعذاب القبر، اللهم آت نفسي تقواها، وزكها أنت خير من زكاها. أنت وليها ومولاها. اللهم إني أعوذ بك من علم لا ينفع، ومن قلب لا يخشع، ومن نفس لا تشبع، ومن دعوة لا يستجاب لها',
+    '**‏اذكار  |  **اللهم إني أعوذ بك من شر ما عملت، ومن شر ما لم أعمل',
+    '**‏اذكار  |  **اللهم مصرف القلوب صرف قلوبنا على طاعتك',
+  ]
+  client.on('message', message => {
+	  	var prefix = "*"
   if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(" ").slice(1);
-
-// !say
-  if (command === "say") {
-          message.delete()
-    message.channel.sendMessage(args.join(" ")).catch(console.error);
+  if (message.content.startsWith(prefix + 'اذكار')) {
+    if(!message.channel.guild) return;
+  var client= new Discord.RichEmbed()
+  .setTitle("Legend GaMerZ .")
+  .setThumbnail(message.author.avatarURL)
+  .setColor('RANDOM')
+  .setDescription(`${adkar[Math.floor(Math.random() * adkar.length)]}`)
+                 .setTimestamp()
+  message.channel.sendEmbed(client);
+  message.react("??")
   }
-  
- 
-
-if (command == "embed") {
-    let say = new Discord.RichEmbed()
-    .setDescription(args.join("  "))
-    .setColor(0x23b2d6)
-    message.channel.sendEmbed(say);
-    message.delete();
-  }
-
-
-});
-
-
-   client.on("message", message => {
-    const prefix = "."
-              
-          if(!message.channel.guild) return;
-   if(message.author.bot) return;
-      if(message.content === prefix + "image"){ 
-          const embed = new Discord.RichEmbed()
-  
-      .setTitle(`This is  ** ${message.guild.name} **  Photo !`)
-  .setAuthor(message.author.username, message.guild.iconrURL)
-    .setColor(0x164fe3)
-    .setImage(message.guild.iconURL)
-    .setURL(message.guild.iconrURL)
-                    .setTimestamp()
-
-   message.channel.send({embed});
-      }
   });
   
-  client.on('message', (message) => {
-    if (message.content.startsWith('.kick')) {
-        var member= message.mentions.members.first();
-        member.kick().then((member) => {
-            message.channel.send(member.displayName + ' تم طرد هذا الشخص من السيرفر');
-        }).catch(() => {
-            message.channel.send(":x:");
-        });
-    }
-}); 
-
-
-client.on('message', (message) => {
-    if (message.content.startsWith('.band')) {
-      if(!message.member.hasPermission('BAN_MEMBERS')) return message.reply('هذا الخاصية للدارة فقط');
-        var member= message.mentions.members.first();
-        member.ban().then((member) => {
-         message.channel.send(member.displayName + 'تم طرد هذا الشخص من السيرفر');
-        }).catch(() => {
-            message.channel.send('Error :_:');
-        });
-    }
-});
-  
-  client.on("message", (message) => {
-    if (message.content.startsWith('.delet')) {
-        if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
-
-        let args = message.content.split(' ').slice(1);
-        let channel = message.client.channels.find('name', args.join(' '));
-        if (!channel) return message.reply('**There is no room like this name -_-**').catch(console.error);
-        channel.delete()
-    }
-});
-  
-  
 client.on('message', message => {
-     if (message.content === ".servers") {
-     let embed = new Discord.RichEmbed()
-  .setColor("RANDOM")
-  .addField("**| السيرفرات |**" , client.guilds.size)
-  message.channel.sendEmbed(embed);
+ if(message.content.startsWith(prefix + 'pat')) {
+   let args = message.content.split(" ").slice(1);
+    let hug = [
+        "https://cdn.discordapp.com/attachments/466949822604247044/467186871290822657/pat-B1SOzCV0W.gif",
+        "https://cdn.discordapp.com/attachments/466949822604247044/466954354927337472/26d886c039e5f438d36c22964f1e79d0.gif",
+        "https://cdn.discordapp.com/attachments/466949822604247044/466952080750280724/tenor.gif",
+        "https://cdn.discordapp.com/attachments/466949822604247044/466951974726664192/1506871682_tumblr_o925gmua611uhpv9wo1_540.gif",
+        "https://cdn.discordapp.com/attachments/466949822604247044/466951961439109130/pets.gif",
+        "https://cdn.discordapp.com/attachments/466949822604247044/466951936873201664/tenor-1.gif",
+        "https://media2.giphy.com/media/109ltuoSQT212w/giphy.gif",
+        "https://media3.giphy.com/media/ye7OTQgwmVuVy/giphy.gif",
+        "https://media1.giphy.com/media/ARSp9T7wwxNcs/giphy.gif",
+        "https://media2.giphy.com/media/aPOuFhSOoeoAo/giphy.gif",
+        "https://media0.giphy.com/media/L2z7dnOduqEow/giphy.gif",
+        "https://media0.giphy.com/media/X9MUeQelKifU4/giphy.gif",
+        "https://media.giphy.com/media/4HP0ddZnNVvKU/giphy.gif",
+        "https://media1.giphy.com/media/e7xQm1dtF9Zni/giphy.gif",
+        "https://78.media.tumblr.com/6d55745d63a3829693ce68a71ddbd218/tumblr_ox5dckEwTQ1rupogao1_500.gif",
+        "https://78.media.tumblr.com/59074e59e5563e15623216e3e33cd259/tumblr_ojt62uIuDB1vztiw8o1_500.gif",
+    ]
+    let hugresult = Math.floor((Math.random() * hug.length));
+    if (!args[0]) {
+        const ghembed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+            .setTitle(``)
+            .setImage('')
+        message.channel.send({
+            embed: ghembed
+        })
+        return;
+     }
+    if (!message.mentions.members.first().user.username === message.isMentioned(message.author)) {
+        const hembed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+            .setTitle(`${message.mentions.members.first().user.username} you have been patted by ${message.author.username}`)
+            .setImage(hug[hugresult])
+        message.channel.send({
+            embed: hembed
+        })
+        return;
     }
+    const ghembed = new Discord.RichEmbed()
+        .setColor(RANDOM)
+        .setTitle(``)
+        .setImage('')
+    message.channel.send({
+        embed: ghembed
+    })
+}
 });
 
-var cats = ["https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg","http://www.dogbazar.org/wp-content/uploads/2014/09/british-bull-dog-puppies.jpg","http://cdn2-www.dogtime.com/assets/uploads/gallery/german-shepherd-dog-breed-pictures/standing-7.jpg","http://cdn.akc.org/Marketplace/Breeds/German_Shepherd_Dog_SERP.jpg","https://animalso.com/wp-content/uploads/2016/12/black-german-shepherd_2.jpg","https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpg","https://www.petfinder.com/wp-content/uploads/2012/11/101438745-cat-conjunctivitis-causes.jpg","http://www.i-love-cats.com/images/2015/04/12/cat-wallpaper-38.jpg","https://www.aspca.org/sites/default/files/cat-care_urine-marking_main-image.jpg","https://s-media-cache-ak0.pinimg.com/originals/f0/3b/76/f03b7614dfadbbe4c2e8f88b69d12e04.jpg","http://www.rd.com/wp-content/uploads/sites/2/2016/04/15-cat-wants-to-tell-you-attention.jpg","https://www.thelocal.de/userdata/images/article/fa6fd5014ccbd8f4392f716473ab6ff354f871505d9128820bbb0461cce1d645.jpg","https://www.adelaidezoo.com.au/wp-content/uploads/sites/2/animals/GiantPanda3Slider.jpg","http://imagem.band.com.br/f_230168.jpg"]
     client.on('message', message => {
+var prefix = "#";
+var cats = ["http://palestine-kitchen.ps/wp-content/uploads/2017/12/%D9%86%D9%83%D8%AA-%D8%AF%D8%A8%D8%A7%D9%86%D8%A9.png","http://www.i7lm.com/wp-content/uploads/2017/04/136769797816.jpg","https://4.bp.blogspot.com/-p62zmDIDXmI/WKzqNt9smaI/AAAAAAAAC4Q/sW_bSIB8OaQhwOYFeplc3uzz8PBN7l3YACEw/s1600/13602501135.jpg","https://www.universemagic.com/images/2016/03/7938-2-or-1457539273.jpg","https://1.bp.blogspot.com/-yFk-FzHSyE8/WR9fmPcsCUI/AAAAAAAAE6c/AmvjLadOiLY9GiCqMLHgA121bY2RS_dCwCLcB/s1600/%25D9%2586%25D9%2583%25D8%25AA%2B%25D9%2585%25D8%25B6%25D8%25AD%25D9%2583%25D8%25A9%2B1.jpg","https://l7zaat.com/wp-content/uploads/2018/02/423.jpg","https://www.petfinder.com/wp-content/uploads/2012/11/101438745-cat-conjunctivitis-causes.jpg","http://www.shuuf.com/shof/uploads/2018/02/08/jpg/shof_97d686082bdb0a2.jpg"];
         var args = message.content.split(" ").slice(1);
-    if(message.content.startsWith(prefix + 'animal')) {
+    if(message.content.startsWith(prefix + 'نكت')) {
          var cat = new Discord.RichEmbed()
 .setImage(cats[Math.floor(Math.random() * cats.length)])
 message.channel.sendEmbed(cat);
     }
-
-
-client.on('message', message => {
-    if (message.content === ".server") {
-        if (!message.channel.guild) return
-        var verificationLevel = message.guild.verificationLevel;
-        const verificationLevels = ['None','Low','Meduim','High','Extreme'];
-        var Y1 = message.guild.createdAt.getFullYear() - 2000
-        var M2 = message.guild.createdAt.getMonth()
-        var D3 = message.guild.createdAt.getDate()
-        const xNiTRoZ = new Discord.RichEmbed()
-         .setAuthor(message.author.username , message.author.avatarURL)
-         .setColor('RANDOM')
-         .setTimestamp()
-         .setTitle(message.guild.name,message.guild.iconURL)
-         .addField(':id: اي دي السيرفر',`${message.guild.id}`,true)
-         .addField(':date: أنشئت في',D3 + '.' + M2 + '.' + Y1,true)             
-         .addField(':crown: اونر السيرفر',`${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`)             
-         .addField(':busts_in_silhouette: الاعضاء ' + ` ${message.guild.memberCount} `,'Online '+`[ ${message.guild.members.filter(m=>m.presence.status == 'online','idle','dnd').size} ]`+ ','+'Offline '+`[ ${message.guild.members.filter(m=>m.presence.status == 'offline').size} ]`,true)
-         .addField(':speech_balloon: قنوات' +' '+message.guild.channels.size+' ',`Text [ ${message.guild.channels.filter(m => m.type === 'text').size} ]`+', '+`Voice [ ${message.guild.channels.filter(m => m.type === 'voice').size} ]`,true)
-         .addField(':earth_asia: الدوله',message.guild.region)
-         .addField(':ribbon: ايموجي السيرفر',`${message.guild.emojis.size}`,true)
-         .addField(':construction: مستوى التحقق',`${verificationLevels[message.guild.verificationLevel]}`,true)
-         .addField(':closed_lock_with_key: الرتب  '+message.guild.roles.size+' ','Type `.roles` To See The Server Roles!')
-         message.channel.send({embed:xNiTRoZ});
-     }
-    });
-
-
-  client.on('message', message => {
-    if (message.content === ".rooms") {
-                      if (!message.guild) return;
-
-        var channels = message.guild.channels.map(channels => `${channels.name}, `).join(' ')
-        const embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .addField(`${message.guild.name}`,`**Rooms:white_check_mark:**`)
-        .addField(':arrow_down: Rooms Number. :heavy_check_mark:',`** ${message.guild.channels.size}**`)
-        
-.addField(':arrow_down:Rooms  Name. :heavy_check_mark::',`**[${channels}]**`)
-        message.channel.sendEmbed(embed);
-    }
 });
 
-  const HeRo = new Discord.Client();
-  client.on('message', message => {
-      if (message.content === prefix + "date") {
-          if (!message.channel.guild) return message.reply('** This command only for servers **');  
-          var currentTime = new Date(),
-              Year = currentTime.getFullYear(),
-              Month = currentTime.getMonth() + 1,
-              Day = currentTime.getDate();
-
-              var Date15= new Discord.RichEmbed()
-              .setTitle("**?  Date - التاريخ ? **")
-              .setColor('RANDOM')
-              .setTimestamp()
-              .setDescription( "?"+ Day + "-" + Month + "-" + Year + "?")
-              .setFooter(`*help to see all bot commands `, 'https://images-ext-1.discordapp.net/external/x-p4BwGofa_z_p9hpV-4hJPcqWh-aWGQzsmI189cDiY/%3Fwidth%3D344%26height%3D344/https/media.discordapp.net/attachments/372444859329544203/372701184055836682/ass.jpg?width=231&height=231')
-               message.channel.sendEmbed(Date15);
-      }
-  });
-
-
-
-
-    client.on('message', message => {
-              if (!message.channel.guild) return;
-      if(message.content =='.members')
-      var IzRo = new Discord.RichEmbed()
-      .setThumbnail(message.author.avatarURL)
-      .setFooter(message.author.username, message.author.avatarURL) 
-      .setTitle(':tulip:| Members info')
-      .addBlankField(true)
-      .addField(':green_book:| الاونلاين ',
-      `${message.guild.members.filter(m=>m.presence.status == 'online').size}`)
-      .addField(':closed_book:| دي ان دي',`${message.guild.members.filter(m=>m.presence.status == 'dnd').size}`)
-      .addField(':orange_book:| خامل',`${message.guild.members.filter(m=>m.presence.status == 'idle').size}`)
-      .addField(':notebook:| الاوف لاين ',`${message.guild.members.filter(m=>m.presence.status == 'offline').size}`)
-      .addField('عدد اعضاء السيرفر',`${message.guild.memberCount}`)
-      message.channel.send(IzRo);
-    });
-
-
-client.on('message', message => {
-    if (message.author.bot) return;
-    if (!message.content.startsWith(prefix)) return;
-
-    if (message.content.startsWith(prefix + 'edit')) {
-        message.channel.sendMessage('Edit me').then(msg=>{msg.edit('Done edit')});
-    }
+const Discord = require('discord.js');
+const logger = require('winston'); //NOURELDIEN ALPHACODES
+const connect4 = require('./connect4/connect4.js');
+//NOURELDIEN ALPHACODES
+const runningGames = new Map(); //NOURELDIEN ALPHACODES 
+// Configure logger settings
+logger.remove(logger.transports.Console);
+logger.add(logger.transports.Console, {
+    colorize: true
 });
+logger.level = 'debug'; //NOURELDIEN ALPHACODES
 
-client.on('message', message => {
-     if (message.content === ".bot") {
-            if(!message.channel.guild) return message.reply('** This command only for servers **');
-     let embed = new Discord.RichEmbed()
-  .setColor("RANDOM")
-  .addField("**عدد السيرفرات الي فيها البوت:**" , client.guilds.size)
-  .addField("**المستخدمين:**", client.users.size)
-  .addField("**قنوات:**", client.channels.size)
-  .setTimestamp()
-message.channel.sendEmbed(embed);
+ //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES
+
+const playTheGame = (msg) => {
+    if(runningGames.has(msg.author.id)){
+        console.log(runningGames);
+    }else{
+        runningGames.set(msg.author.id, new connect4());
     }
-});
+};
 
 
+const emojiToCol = new Map();
+emojiToCol.set('\u0031\u20E3',0);
+emojiToCol.set('\u0032\u20E3',1);
+emojiToCol.set('\u0033\u20E3',2); //NOURELDIEN ALPHACODES
+emojiToCol.set('\u0034\u20E3',3); //NOURELDIEN ALPHACODES
+emojiToCol.set('\u0035\u20E3',4); //NOURELDIEN ALPHACODES
+emojiToCol.set('\u0036\u20E3',5); //NOURELDIEN ALPHACODES
+emojiToCol.set('\u0037\u20E3',6); //NOURELDIEN ALPHACODES
+let theMsgWeWorkWith;
 
-client.on('message', message => {
-    if (message.content === ".role") {
-        var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
-        const embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .addField('الرتب:',`**[${roles}]**`)
-        message.channel.sendEmbed(embed);
+const createDisplayGrid = (grid) => {
+    let theCurrentGrid = grid.getGridForDisplay();
+    let msgTxt = "";
+    for(let row of theCurrentGrid){   
+        msgTxt += row.join('')
+        .replace(/0/g,':white_large_square: ')
+        .replace(/Y/g,':red_circle: ')
+        .replace(/R/g,':large_blue_circle: ');
+        msgTxt+='\n'; //NOURELDIEN ALPHACODES
     }
-});
-
-
-client.on("guildCreate", guild => {
-  console.log(` شخص ما اضاف بوت  في سيرفر اسمه ! ${guild.name} اونر سيرفر هو ${guild.owner.user.username}!`)
-});
-
-
-
-
-
-
-client.on('message', message=>{
-    if (message.content ==='.add-colors'){
-        if (message.channel.guild){
-            if (message.member.hasPermission('MANAGE_ROLES')){
-                setInterval(function(){})
-                  let count = 0;
-                  let ecount = 0;
-        for(let x = 0; x < 250; x++){
-            message.guild.createRole({name:x,
-            color: 'RANDOM'})
-      }
-            }else{
-                message.channel.sendMessage(':warning: You do not have permission to write this command')
-            }
-        }else{
-            message.channel.sendMessage(':warning:  This command only in servers')
-        }
-    }
-    if (message.content === '.de-colors'){
-                if (message.channel.guild){
-            if (message.member.hasPermission('MANAGE_ROLES')){
-                setInterval(function(){})
-                  let count = 0;
-                  let ecount = 0;
-        for(let x = 0; x < 250; x++){
-            message.guild.roles.find('name', x)
-      }
-            }else{
-                message.channel.sendMessage(':warning: You do not have permission to write this command')
-            }
-        }else{
-            message.channel.sendMessage(':warning:  This command only in servers')
-        }
-    }
-
-})
-  
-  
-  
- 
-  
- client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
- 
-client.on('message', message => {
-   
-    let args = message.content.split(' ').slice(1).join(' ');
-   
-  if (message.content === 'ping') {
-      message.channel.send(`<@${message.author.id}> Ping..!`)
-  }
- 
- 
-  if (message.content.startsWith('.bc')) {
-          if (!args[0]) {
-message.channel.send("**$bc <message>**");
-return;
+    return msgTxt;
 }
-message.guild.members.forEach(m => {
-   if(!message.member.hasPermission('ADMINISTRATOR')) return;
-   m.send(`${args}`);
- 
+ //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES
+const createMessageAndCollector = (message) => {
+    message.channel.send(createDisplayGrid(runningGames.get(message.author.id)))
+    .then(function(msg){
+        theMsgWeWorkWith = msg;
+        msg.react('\u0031\u20E3').then(() => { //NOURELDIEN ALPHACODES
+            msg.react('\u0032\u20E3').then(() => {
+                msg.react('\u0033\u20E3').then(() => {
+                    msg.react('\u0034\u20E3').then(() => {
+                        msg.react('\u0035\u20E3').then(() => {
+                            msg.react('\u0036\u20E3').then(() => {
+                                msg.react('\u0037\u20E3');
+                            })
+                        })
+                    })
+                })
+            }) //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES
+        });
+        let filter = function(reaction, user){
+            return user.id != bot.user.id && user.id == message.author.id;
+        };
+        let collector = msg.createReactionCollector(filter, { time: 60000 });
+        collector.on('collect', function(reaction){
+            console.log(theMsgWeWorkWith);
+            if(emojiToCol.has(reaction.emoji.name)){
+                let g = runningGames.get(message.author.id);
+                g.play('R', emojiToCol.get(reaction.emoji.name));
+                g.IA_cleanSmartPlay('Y');
+                if(g.isWon()||g.isDraw()){
+                    theMsgWeWorkWith.delete()
+                    .then(()=>{
+                        collector.stop();
+                        message.channel.send(createDisplayGrid(g));
+                        if(g.isDraw())
+                            message.channel.send(`Match nul`);
+                        if(g.isWon())
+                            message.channel.send(`:tada: | **Congratulations ${((g._winner == 'Y')?':red_circle:':':large_blue_circle:')} won the game !`);
+                        runningGames.delete(message.author.id);
+                    })
+                    .catch(console.log("Cannot delete"));
+                }
+                else{
+                    theMsgWeWorkWith.delete()
+                    .then(()=>{ //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES
+                        collector.stop();
+                        createMessageAndCollector(message);
+                    })
+                    .catch(console.log("Cannot delete"));
+                }
+                console.log(g);
+            }
+        });
+        collector.on('end', function(collected, reason){
+      
+        });
+    });
+}; //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES
+
+// Initialize Discord Bot
+const bot = new Discord.Client();
+
+/* Bot stuff, creating ready event*/
+bot.on('ready', (evt) => {
+    logger.info('Connected');
+    logger.info('Logged in as: ');
+    logger.info(bot.user.username + ' - (' + bot.user.id + ')');
 });
-  }
- 
-}); 
-  
-  
-client.on('ready', () => {
-   client.user.setGame(" RD For Ever ");
-}); 
+
+bot.on('message', (message) => {
+    // Our bot needs to know if it will execute a command
+    // It will listen for messages that will start with `prefix`
+    let prefix = "=";
+    if(message.author.id == bot.user.id)
+        return;
+    if (message.content.substring(0, 1) == prefix) {   
+        let args = message.content.substring(prefix.length).split(' ');
+        let cmd = args[0];
+        args = args.splice(1);
+        switch(cmd) { //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES
+            case 'c4':
+                message.channel.send(`:fire: **${message.author}** VS **NourBot** :fire:`)
+                playTheGame(message);
+                createMessageAndCollector(message);
+                ///////////////////////////////////////////
+               /* 
+                theMsgWeWorkWith = message.channel.send('Play')
+                .then(function(msg){
+                    msg.react('\u0031\u20E3').then(() => {
+                        msg.react('\u0032\u20E3').then(() => {
+                            msg.react('\u0033\u20E3').then(() => {
+                                msg.react('\u0034\u20E3').then(() => {
+                                    msg.react('\u0035\u20E3').then(() => {
+                                        msg.react('\u0036\u20E3').then(() => {
+                                            msg.react('\u0037\u20E3');
+                                        })
+                                    })
+                                })
+                            })
+                        })
+                    });
+                    var filter = function(reaction, user){
+                        return user.id != bot.user.id;
+                    };
+                    const collector = msg.createReactionCollector(filter, { time: 60000 });
+                    collector.on('collect', function(reaction){
+                        if(emojiToCol.has(reaction.emoji.name)){
+                            let g = runningGames.get(message.author.id);
+                            g.play('R', emojiToCol.get(reaction.emoji.name));
+                            g.IA_cleanSmartPlay('Y');
+                            if(g.isWon())
+                                message.channel.send("PArtie terminée");
+                            console.log(g);
+                        }
+                    });
+                    collector.on('end', function(collected, reason){
+                  
+                    });
+                });*/
+                ////////////////////////////////////////
+            break; //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES
+            case 'c4play':
+                console.log(runningGames.get(message.author.id));
+            break;
+         }
+     }
+}); //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES //NOURELDIEN ALPHACODES
 
 client.on("message", message => {
-            var args = message.content.substring(prefix.length).split(" ");
-            if (message.content.startsWith(prefix + "امسح")) {
- if (!args[1]) {
-                                let x5bz1 = new Discord.RichEmbed()
-                                .setDescription("-clear <number>")
-                                .setColor("#0000FF")
-                                message.channel.sendEmbed(x5bz1);
-                            } else {
-                            let messagecount = parseInt(args[1]);
-                            message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
-                                                          message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
-                            message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
-                            let x5bz2 = new Discord.RichEmbed()
-                                                            .setColor("#008000")
-                                .setDescription(":white_check_mark: | Delete " + args[1] + " Message!")
-                                                                                        message.delete("..");
-                                message.channel.sendEmbed(x5bz2);
-                            }
-                          }
-});
-
- 
- 
-client.on('message', msg => {
-  if (msg.content === 'السعودية') {      
-    msg.react("🇸🇦")
-    msg.channel.send("🇸🇦")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'مصر') {      
-    msg.react("🇪🇬")
-    msg.channel.send("🇪🇬")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'المغرب') {      
-    msg.react("🇲🇦")
-    msg.channel.send("🇲🇦")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'العراق') {      
-    msg.react("🇮🇶")
-    msg.channel.send("🇮🇶")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'الجزائر') {      
-    msg.react("🇩🇿")
-    msg.channel.send("🇩🇿")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'الامارات') {      
-    msg.react("🇦🇪")
-    msg.channel.send("🇦🇪")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'تونس') {      
-    msg.react("🇹🇳")
-    msg.channel.send("🇹🇳")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'سوريا') {      
-    msg.react("🇸🇾")
-    msg.channel.send("🇸🇾")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'ليبيا') {      
-    msg.react("🇱🇾")
-    msg.channel.send("🇱🇾")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'قطر') {      
-    msg.react("🇶🇦")
-    msg.channel.send("🇶🇦")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'الصومال') {      
-    msg.react("🇸🇴")
-    msg.channel.send("🇸🇴")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'عمان') {      
-    msg.react("🇴🇲")
-    msg.channel.send("🇴🇲")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'موريتانيا') {      
-    msg.react("🇲🇷")
-    msg.channel.send("🇲🇷")
-  }
-});
-
-
-
-
-
-
-client.on('message', message => {
+    var prefix = "!"
     if (!message.content.startsWith(prefix)) return;
-    var args = message.content.split(' ');
-    var command = args[0];
-    switch(command) {
-        case "مسح":
-        if (message.channel.type !== "text") return message.reply("** This Command is Only For Servers | :x: **");
-        if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("** You Don't Have Access To Do This Command | :x: **");
-        if (!args[1]) args[1] = 100;
-        var count = parseInt(args[1]);
-        if (isNaN(count)) return message.reply("** You Have To Type Number | :x: **");
-        message.channel.bulkDelete(count).then(msgs => {
-            message.channel.send(`** Done ** | I have Deleted ${msgs.size} Messages ...`);
-            var x = 0;
-            var messages = msgs.map(m => `${++x} - ${m.author.tag}  :  ${m.content.split(" ").join(" ")}`).join(`
-`);
-            fs.writeFile(`${message.guild.id}.txt`, messages, (err) => {
-                if (err) console.log(err.message);
-                h.post(messages).then(url => {
-                    var c = message.guild.channels.find("name", 'logs');
-                    if (!c) return;
-                    var embed = new Discord.RichEmbed()
-                    .setTitle(`Bulk Delete. | ${msgs.size} Messages`)
-                    .setAuthor(client.user.tag, client.user.avatarURL)
-                    .setThumbnail(message.guild.iconURL)
-                    .setColor("RANDOM")
-                    .setDescription(`By \`${message.author.tag}\`\n\n In #${message.channel.name}\n\n [Vew Messages on : \`HasteBin\`](${url})`)
-                    .attachFile(`./${message.guild.id}.txt`);
-                    c.send(`Download Messages : `, {embed : embed});
-                });
-            });
-        });
+      let command = message.content.split(" ")[0];
+      command = command.slice(prefix.length);
+        if(command === "skin") {
+                const args = message.content.split(" ").slice(1).join(" ")
+        if (!args) return message.channel.send("** Type your skin name **");
+        const image = new Discord.Attachment(`https://visage.surgeplay.com/full/256/${args}`, "skin.png");
+    message.channel.send(image)
+        }
+    });
 
-    };
-});
-
- 
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Desert Bot- Script By : Diamond Codes`);

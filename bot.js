@@ -918,5 +918,3 @@ client.user.setStatus("online")
 }); 
 	    
 client.login(process.env.BOT_TOKEN);
-	
-	

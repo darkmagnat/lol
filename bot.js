@@ -914,8 +914,9 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setGame(`Sea World`,"http://twitch.tv/S-F")
 client.user.setStatus("online")
- 
-});
 
- 
+}); 
+	    
 client.login(process.env.BOT_TOKEN);
+	
+	

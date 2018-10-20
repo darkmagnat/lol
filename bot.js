@@ -870,11 +870,6 @@ client.on('message', msg => {
 
 
 
-
-const hastebin = require('hastebin.js');
-const fs = require('fs');
-var h = new hastebin({});
-
 client.on('message', message => {
     if (!message.content.startsWith(prefix)) return;
     var args = message.content.split(' ');
